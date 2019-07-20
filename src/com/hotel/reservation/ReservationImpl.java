@@ -54,10 +54,10 @@ public class ReservationImpl implements Reservation {
 	@Override
 	public boolean isValid(BookingDateRange dateRange) {
 		if (dateRange.getStartDate() >= 0 && dateRange.getStartDate() <= Hotel.daysLimit && dateRange.getEndDate() >= 0
-				&& dateRange.getEndDate() <= Hotel.daysLimit)
+				&& dateRange.getEndDate() <= Hotel.daysLimit && dateRange.getStartDate()<=dateRange.getEndDate())
 			return true;
 		else
 			return false;
 	}
-
+ 
 }
